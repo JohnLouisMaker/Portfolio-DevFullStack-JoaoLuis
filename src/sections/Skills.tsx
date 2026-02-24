@@ -7,11 +7,11 @@ const skillCategories = [
   },
   {
     title: "Backend",
-    skills: ["Node.js", "Express", "PostgreSQL", "REST APIs"],
+    skills: ["Python", "FastAPI", "PostgreSQL", "REST APIs"],
   },
   {
     title: "Ferramentas",
-    skills: ["Git", "Insomnia", "Figma", "VS Code", "Vercel"],
+    skills: ["Git", "Figma", "VS Code", "Vercel"],
   },
 ];
 

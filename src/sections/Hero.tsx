@@ -133,7 +133,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-wrap items-center justify-center gap-3 mt-14"
           >
-            {["React", "TypeScript", "Tailwind", "Node.js", "Next.js"].map(
+            {["React", "TypeScript", "Tailwind", "Python", "FastAPI", "PostgreSQL"].map(
               (tech, index) => (
                 <motion.span
                   key={tech}
