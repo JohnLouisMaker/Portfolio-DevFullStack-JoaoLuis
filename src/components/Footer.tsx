@@ -1,9 +1,10 @@
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import {Mail } from "lucide-react";
+import { FaGithub, FaLinkedin} from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/JohnLouisMaker", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/jo%C3%A3o-luis-75b18a333/", label: "LinkedIn" },
+  { icon: FaGithub, href: "https://github.com/JohnLouisMaker", label: "GitHub" },
+  { icon: FaLinkedin, href: "https://www.linkedin.com/in/jo%C3%A3o-luis-75b18a333/", label: "LinkedIn" },
   { icon: Mail, href: "mailto:joaoluisdev9@gmail.com", label: "Email" },
 ];
 

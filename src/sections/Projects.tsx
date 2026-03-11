@@ -1,8 +1,9 @@
-import { motion, easeOut } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
-import taskzen from "../assets/imgs/taskzen.png";
-import cinezaImg from "../assets/imgs/cineza.png";
-import ufelina from "../assets/imgs/ufelina.png";
+import { easeOut, motion } from "framer-motion";
+import { ExternalLink} from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+import cinezaImg from "../assets/img/cineza.png";
+import pythonImg from "../assets/img/python.png";
+import ufelina from "../assets/img/ufelina.png";
 
 const projects = [
   {
@@ -14,16 +15,18 @@ const projects = [
     github: "https://github.com/JohnLouisMaker/uniao-felina-website",
     live: "https://uniao-felina-website.vercel.app/",
     featured: true,
+    warning: false,
   },
   {
-    title: "TaskZen: Gerenciador de Tarefas",
+    title: "Python + FastAPI: Sistema de Pedidos",
     description:
-      "Aplicação colaborativa para gerenciamento de tarefas com atualizações em tempo real.",
-    image: taskzen,
-    tags: ["React", "JavaScript", "Email.js", "JSON Server", "CRUD"],
-    github: "https://github.com/JohnLouisMaker/task-zen-final",
-    live: "https://task-zen-final.vercel.app/",
+      "API RESTful para gerenciamento de pedidos, construída com FastAPI, SQLAlchemy e autenticação via JWT.",
+    image: pythonImg,
+    tags: ["Python", "FastAPI", "SQLAlchemy", "JWT", "BCrypt"],
+    github: "https://github.com/JohnLouisMaker/deliver-backend",
+    live: "",
     featured: true,
+    warning: true,
   },
   {
     title: "Cineza: Plataforma de filmes (TMDb)",
@@ -34,6 +37,7 @@ const projects = [
     github: "https://github.com/JohnLouisMaker/cineza",
     live: "https://cineza-beta.vercel.app/",
     featured: true,
+    warning: false,
   },
 ];
 
@@ -58,20 +62,20 @@ const cardBase =
 
 function ProjectLinks({ github, live }: { github: string; live: string }) {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 pt-6">
       <a
         href={github}
         target="_blank"
         className="text-slate-400 hover:text-sky-400"
       >
-        <Github className="w-5 h-5" />
+        <FaGithub className="w-7 h-7" />
       </a>
       <a
         href={live}
         target="_blank"
         className="text-slate-400 hover:text-sky-400"
       >
-        <ExternalLink className="w-5 h-5" />
+        <ExternalLink className="w-7 h-7" />
       </a>
     </div>
   );
@@ -131,6 +135,13 @@ export default function Projects() {
                 </p>
 
                 <Tags tags={project.tags} />
+
+                {project.warning && (
+                  <p className="text-lg bg-yellow-500/60 border-2 border-yellow-600 px-4 py-2 text-center rounded-2xl text-yellow-400 mb-4">
+                    Projeto Em Desenvolvimento
+                  </p>
+                )}
+
                 <ProjectLinks github={project.github} live={project.live} />
               </div>
             </motion.div>
