@@ -107,14 +107,14 @@ export default function Hero() {
                   className="absolute mt-2 w-full rounded-lg bg-[#020617] border border-slate-800 overflow-hidden shadow-lg z-20"
                 >
                   <a
-                    href="/Curriculo_JoaoLuisSilvaDev.pdf"
+                    href="/joaoluis_curriculo_fullstack.pdf"
                     download
                     className="flex items-center gap-2 px-4 py-3 text-sm text-slate-300 hover:bg-sky-500/10 transition"
                   >
                     Baixar PDF
                   </a>
                   <a
-                    href="/Curriculo_JoaoLuisSilvaDev.docx"
+                    href="/joaoluis_curriculo_fullstack.docx"
                     download
                     className="flex items-center gap-2 px-4 py-3 text-sm text-slate-300 hover:bg-sky-500/10 transition"
                   >

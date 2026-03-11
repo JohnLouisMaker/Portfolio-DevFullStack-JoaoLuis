@@ -122,14 +122,14 @@ export default function Navbar() {
                   "
                 >
                   <a
-                    href="../../public/Curriculo_JoaoLuisSilvaDev.pdf"
+                    href="../../public/joaoluis_curriculo_fullstack.pdf"
                     download
                     className="block px-4 py-3 text-xs text-slate-300 hover:bg-slate-800"
                   >
                     Baixar PDF
                   </a>
                   <a
-                    href="../../public/Curriculo_JoaoLuisSilvaDev.dcox"
+                    href="../../public/joaoluis_curriculo_fullstack.dcox"
                     download
                     className="block px-4 py-3 text-xs text-slate-300 hover:bg-slate-800"
                   >
@@ -206,14 +206,14 @@ export default function Navbar() {
         "
                     >
                       <a
-                        href="../../public/Curriculo_JoaoLuisSilvaDev.pdf"
+                        href="../../public/joaoluis_curriculo_fullstack.pdf"
                         download
                         className="block px-4 py-3 text-xs text-slate-300 hover:bg-slate-800 text-center"
                       >
                         Baixar PDF
                       </a>
                       <a
-                        href="../../public/Curriculo_JoaoLuisSilvaDev.docx"
+                        href="../../public/joaoluis_curriculo_fullstack.docx"
                         download
                         className="block px-4 py-3 text-xs text-slate-300 hover:bg-slate-800 text-center"
                       >
