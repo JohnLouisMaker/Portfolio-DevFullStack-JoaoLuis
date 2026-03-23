@@ -12,7 +12,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Localização",
-    value: "Caucaia, Ceará - Brasil",
+    value: "Fortaleza, Ceará - Brasil",
     href: "#",
   },
   {
