@@ -1,5 +1,5 @@
 import { easeOut, motion } from "framer-motion";
-import { ExternalLink} from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import cinezaImg from "../assets/img/cineza.png";
 import pythonImg from "../assets/img/python.png";
@@ -87,7 +87,7 @@ function Tags({ tags }: { tags: string[] }) {
       {tags.map((tag) => (
         <span
           key={tag}
-          className="text-xs font-mono px-3 py-1 rounded-full bg-slate-900 text-slate-400 border border-slate-800"
+          className="text-xs font-mono px-3 py-1 rounded-full bg-slate-900 group-hover:text-sky-400 text-slate-400 border border-slate-800 ease-in-out duration-300"
         >
           {tag}
         </span>
@@ -98,7 +98,7 @@ function Tags({ tags }: { tags: string[] }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 bg-black text-slate-100">
+    <section id="projects" className="py-24 bg-[#020617] text-slate-100">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div {...motionProps} viewport={{ once: true, amount: 0.3 }}>
           <h2 className="text-3xl md:text-4xl font-resolve text-center mb-4">
@@ -121,7 +121,10 @@ export default function Projects() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover 
+               saturate-0 brightness-90
+               group-hover:saturate-100 group-hover:brightness-100 group-hover:scale-110 
+               transition-all duration-700"
                 />
               </div>
 
@@ -134,7 +137,9 @@ export default function Projects() {
                   {project.description}
                 </p>
 
-                <Tags tags={project.tags} />
+                
+                  <Tags tags={project.tags}/>
+           
 
                 {project.warning && (
                   <p className="text-lg bg-yellow-500/60 border-2 border-yellow-600 px-4 py-2 text-center rounded-2xl text-yellow-400 mb-4">
