@@ -44,7 +44,7 @@ export default function Contact() {
       id="contact"
       className="py-24 font-resolve bg-[#020617] text-slate-100"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-5">
         {/* Título */}
         <motion.div
           initial="hidden"

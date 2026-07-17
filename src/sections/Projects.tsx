@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import cinezaImg from "../assets/img/cineza.png";
 import deliverImg from "../assets/img/deliver-food.png";
-import fortsaldados from "../assets/img/fortaldados.png";
+import fortaldados from "../assets/img/fortaldados.png";
 import ufelina from "../assets/img/ufelina.png";
 
 const projects = [
@@ -13,7 +13,7 @@ const projects = [
     description:
       "Site com informações sobre a ONG União Felina, incluindo trajetória, contato e futuramente notícias.",
     image: ufelina,
-    tags: ["React.js", "TypeScript", "Tailwind", "Cooperação", "ONG"],
+    tags: ["React.js", "TypeScript", "Tailwind", "Cooperação", "Projeto Acadêmico"],
     github: "https://github.com/JohnLouisMaker/uniao-felina-website",
     live: "https://uniao-felina-website.vercel.app/",
     featured: true,
@@ -23,7 +23,7 @@ const projects = [
     description:
       "API RESTful para gerenciamento de pedidos, construída com FastAPI, SQLAlchemy e autenticação via JWT.",
     image: deliverImg,
-    tags: ["Python", "FastAPI", "SQLAlchemy", "JWT", "BCrypt"],
+    tags: ["Python", "FastAPI", "SQLAlchemy", "JWT", "BCrypt", "React", "TypeScript"],
     github: "https://github.com/JohnLouisMaker/deliver-backend",
     live: "",
     featured: true,
@@ -32,7 +32,7 @@ const projects = [
     title: "FortalDados: ChatBot + LLM",
     description:
       "Chatbot inteligente que utiliza LLM langchain para fornecer respostas rápidas e precisas",
-    image: fortsaldados,
+    image: fortaldados,
     tags: ["React", "Python", "LangChain", "LLM", "ChatBot"],
     github: "https://github.com/JohnLouisMaker/fortal-dados",
     live: "https://fortal-dados.vercel.app",
@@ -43,7 +43,7 @@ const projects = [
     description:
       "Plataforma de filmes consumindo dados da TMDb, com interface interativa e design moderno.",
     image: cinezaImg,
-    tags: ["React", "Javascript", "Tailwind", "TMDb API"],
+    tags: ["React", "Javascript", "Tailwind", "TMDb API", "API Externa"],
     github: "https://github.com/JohnLouisMaker/cineza",
     live: "https://cineza-beta.vercel.app/",
     featured: true,
@@ -171,7 +171,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 bg-[#020617] text-slate-100 overflow-hidden"
+      className="py-2 bg-[#020617] text-slate-100 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Cabeçalho */}

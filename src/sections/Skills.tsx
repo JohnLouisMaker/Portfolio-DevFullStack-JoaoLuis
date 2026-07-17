@@ -11,7 +11,7 @@ const skillCategories = [
   },
   {
     title: "Ferramentas",
-    skills: ["Git", "Figma", "VS Code", "Vercel"],
+    skills: ["Docker", "Git", "Figma", "VS Code", "Vercel"],
   },
 ];
 
