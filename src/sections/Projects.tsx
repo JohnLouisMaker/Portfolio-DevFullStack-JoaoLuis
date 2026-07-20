@@ -13,7 +13,13 @@ const projects = [
     description:
       "Site com informações sobre a ONG União Felina, incluindo trajetória, contato e futuramente notícias.",
     image: ufelina,
-    tags: ["React.js", "TypeScript", "Tailwind", "Cooperação", "Projeto Acadêmico"],
+    tags: [
+      "React.js",
+      "TypeScript",
+      "Tailwind",
+      "Cooperação",
+      "Projeto Acadêmico",
+    ],
     github: "https://github.com/JohnLouisMaker/uniao-felina-website",
     live: "https://uniao-felina-website.vercel.app/",
     featured: true,
@@ -23,7 +29,15 @@ const projects = [
     description:
       "API RESTful para gerenciamento de pedidos, construída com FastAPI, SQLAlchemy e autenticação via JWT.",
     image: deliverImg,
-    tags: ["Python", "FastAPI", "SQLAlchemy", "JWT", "BCrypt", "React", "TypeScript"],
+    tags: [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "JWT",
+      "BCrypt",
+      "React",
+      "TypeScript",
+    ],
     github: "https://github.com/JohnLouisMaker/deliver-backend",
     live: "",
     featured: true,
@@ -179,7 +193,7 @@ export default function Projects() {
           <h2 className="text-3xl md:text-4xl font-resolve text-center mb-4">
             Projetos em <span className="text-sky-400">Destaque</span>
           </h2>
-          <p className="font-rounded tracking-wider text-slate-400 text-center max-w-2xl mx-auto mb-12">
+          <p className="font-rounded tracking-wider text-slate-400 text-center max-w-2xl mx-auto mb-6">
             Alguns projetos que representam bem meu trabalho e evolução técnica
           </p>
         </motion.div>
@@ -198,7 +212,7 @@ export default function Projects() {
               {projects.map((project, i) => (
                 <div
                   key={project.title}
-                  className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0"
+                  className="w-[calc(100%-17px)] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0"
                 >
                   <motion.div
                     className={`group font-rimouski rounded-2xl overflow-hidden ${cardBase}`}
@@ -207,7 +221,7 @@ export default function Projects() {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover saturate-0 brightness-90 group-hover:saturate-100 group-hover:brightness-100 group-hover:scale-110 transition-all duration-700"
+                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                       />
                     </div>
 
@@ -234,11 +248,11 @@ export default function Projects() {
           </div>
 
           {/* Botões de Navegação Flutuantes */}
-          <div className="flex justify-center md:justify-between items-center gap-4 mt-8 md:absolute md:inset-x-0 md:top-1/2 md:-translate-y-1/2 md:mt-0 md:pointer-events-none">
+          <div className="flex justify-center items-center gap-4 mt-3">
             <button
               onClick={handlePrev}
               disabled={isPrevDisabled}
-              className={`bg-slate-900 border border-slate-800 p-2.5 rounded-full transition-all md:pointer-events-auto md:-translate-x-14 ${
+              className={`bg-slate-900 border border-slate-800 p-2.5 rounded-full transition-all ${
                 isPrevDisabled
                   ? "text-slate-600 cursor-not-allowed opacity-40"
                   : "text-slate-400 hover:text-sky-400 hover:border-sky-500/40"
@@ -247,10 +261,11 @@ export default function Projects() {
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
+
             <button
               onClick={handleNext}
               disabled={isNextDisabled}
-              className={`bg-slate-900 border border-slate-800 p-2.5 rounded-full transition-all md:pointer-events-auto md:translate-x-14 ${
+              className={`bg-slate-900 border border-slate-800 p-2.5 rounded-full transition-all ${
                 isNextDisabled
                   ? "text-slate-600 cursor-not-allowed opacity-40"
                   : "text-slate-400 hover:text-sky-400 hover:border-sky-500/40"
