@@ -35,7 +35,7 @@ const fadeInUp = {
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 bg-[#020617] text-slate-100">
+    <section id="experience" className="py-2 text-slate-100">
       <div className="max-w-4xl lg:max-w-6xl mx-auto px-6">
         <motion.div
           initial="hidden"

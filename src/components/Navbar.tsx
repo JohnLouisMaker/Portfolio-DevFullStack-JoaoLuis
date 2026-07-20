@@ -20,15 +20,49 @@ const fadeInUp = {
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [lastScroll, setLastScroll] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const [isNavigating, setIsNavigating] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
   const resumeRef = useRef<HTMLDivElement>(null);
 
+  const handleNavLinkClick = () => {
+    setIsNavigating(true);
+    setIsVisible(true);
+    setTimeout(() => {
+      setIsNavigating(false);
+    }, 2000);
+  };
+
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      const tolerance = 25;
+
+      if (isNavigating) return;
+
+      if (currentScroll <= 50) {
+        setIsVisible(true);
+        setIsScrolled(false);
+        setLastScroll(currentScroll);
+        return;
+      }
+
+      setIsScrolled(true);
+
+      if (currentScroll > lastScroll + tolerance) {
+        setIsVisible(false); 
+      } 
+      if (currentScroll < lastScroll - tolerance) {
+        setIsVisible(true);  
+      }
+      setLastScroll(currentScroll);
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScroll, isNavigating]); 
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -46,8 +80,8 @@ export default function Navbar() {
   return (
     <motion.header
       initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: easeOut }}
+      animate={{ y: isVisible ? 0 : -100 }}
+      transition={{ duration: 0.4, ease: easeOut }}
       className={`
         fixed top-0 left-0 right-0 z-50
         transition-all duration-500
@@ -79,6 +113,7 @@ export default function Navbar() {
                 animate="visible"
                 variants={fadeInUp}
                 transition={{ delay: index * 0.1 }}
+                onClick={handleNavLinkClick}
                 className="
                   group relative text-xs uppercase tracking-widest
                   text-white hover:text-sky-400 transition-colors
@@ -129,7 +164,7 @@ export default function Navbar() {
                     Baixar PDF
                   </a>
                   <a
-                    href="../../public/joaoluis_curriculo_fullstack.dcox"
+                    href="../../public/joaoluis_curriculo_fullstack.docx"
                     download
                     className="block px-4 py-3 text-xs text-slate-300 hover:bg-slate-800"
                   >
@@ -168,7 +203,10 @@ export default function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    handleNavLinkClick();
+                  }}
                   className="text-sm uppercase tracking-widest text-slate-400 hover:text-sky-400"
                 >
                   {link.name}
@@ -180,14 +218,14 @@ export default function Navbar() {
                 <button
                   onClick={() => setIsResumeOpen(!isResumeOpen)}
                   className="
-      w-full max-w-xs
-      flex items-center justify-center gap-2
-      px-5 py-2 rounded-md
-      border border-sky-500/40
-      text-sky-400 text-sm
-      hover:bg-sky-500/10
-      transition-all tracking-widest
-    "
+                    w-full max-w-xs
+                    flex items-center justify-center gap-2
+                    px-5 py-2 rounded-md
+                    border border-sky-500/40
+                    text-sky-400 text-sm
+                    hover:bg-sky-500/10
+                    transition-all tracking-widest
+                  "
                 >
                   Currículo
                   <ChevronDown size={14} />
@@ -200,10 +238,10 @@ export default function Navbar() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -6 }}
                       className="
-          w-full max-w-xs
-          bg-black border border-slate-800
-          rounded-md shadow-xl overflow-hidden
-        "
+                        w-full max-w-xs
+                        bg-black border border-slate-800
+                        rounded-md shadow-xl overflow-hidden
+                      "
                     >
                       <a
                         href="../../public/joaoluis_curriculo_fullstack.pdf"

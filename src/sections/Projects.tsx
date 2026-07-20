@@ -185,7 +185,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-2 bg-[#020617] text-slate-100 overflow-hidden"
+      className="py-22 text-slate-100 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Cabeçalho */}

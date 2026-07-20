@@ -26,7 +26,7 @@ const fadeInUp = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 bg-black text-slate-100">
+    <section id="skills" className="py-24 text-slate-100">
       <div className="max-w-6xl mx-auto px-6">
         {/* Título */}
         <motion.div
