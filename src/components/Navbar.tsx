@@ -38,7 +38,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
-      const tolerance = 25;
+      const tolerance = 23;
 
       if (isNavigating) return;
 

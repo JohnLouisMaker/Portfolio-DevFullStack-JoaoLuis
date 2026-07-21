@@ -1,6 +1,6 @@
 import { easeOut, motion } from "framer-motion";
-import { Mail, MapPin, Phone } from "lucide-react";
-import { FaLinkedin } from "react-icons/fa";
+import { Mail, MapPin } from "lucide-react";
+import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 const contactInfo = [
   {
@@ -10,22 +10,22 @@ const contactInfo = [
     href: "mailto:joaoluisdev9@gmail.com",
   },
   {
-    icon: MapPin,
-    label: "Localização",
-    value: "Fortaleza, Ceará - Brasil",
-    href: "#",
-  },
-  {
-    icon: Phone,
-    label: "Telefone",
+    icon: FaWhatsapp,
+    label: "WhatsApp",
     value: "+55 (85) 99722-4365",
-    href: "tel:+5585997224365",
+    href: "https://wa.me/5585997224365",
   },
   {
     icon: FaLinkedin,
     label: "Linkedin",
     value: "João Luis",
-    href: "https://www.linkedin.com/in/joão-luis-75b18a333",
+    href: "https://www.linkedin.com/in/joaoluissdev",
+  },
+  {
+    icon: MapPin,
+    label: "Localização",
+    value: "Fortaleza, Ceará - Brasil",
+    href: "#",
   },
 ];
 
@@ -40,10 +40,7 @@ const fadeInUp = {
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="py-24 font-resolve text-slate-100"
-    >
+    <section id="contact" className="py-24 font-resolve text-slate-100">
       <div className="max-w-6xl mx-auto px-5">
         {/* Título */}
         <motion.div
