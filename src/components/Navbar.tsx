@@ -2,12 +2,22 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, easeOut } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 
-const navLinks = [
-  { name: "Sobre", href: "#about" },
-  { name: "Habilidades", href: "#skills" },
-  { name: "Projetos", href: "#projects" },
-  { name: "Contato", href: "#contact" },
-];
+interface NavLink {
+  name: string;
+  href: string;
+}
+
+interface ResumeProps {
+  label: string;
+  href: string;
+}
+
+interface NavbarProps {
+  brandName: string;
+  brandHighlight: string;
+  links: NavLink[];
+  resume?: ResumeProps[];
+}
 
 const fadeInUp = {
   hidden: { opacity: 0, y: -10 },
@@ -18,7 +28,7 @@ const fadeInUp = {
   },
 };
 
-export default function Navbar() {
+export default function Navbar({ brandName, brandHighlight, links, resume }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScroll, setLastScroll] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -52,17 +62,17 @@ export default function Navbar() {
       setIsScrolled(true);
 
       if (currentScroll > lastScroll + tolerance) {
-        setIsVisible(false); 
-      } 
+        setIsVisible(false);
+      }
       if (currentScroll < lastScroll - tolerance) {
-        setIsVisible(true);  
+        setIsVisible(true);
       }
       setLastScroll(currentScroll);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScroll, isNavigating]); 
+  }, [lastScroll, isNavigating]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -98,14 +108,14 @@ export default function Navbar() {
           whileHover={{ scale: 1.03 }}
           className="text-2xl font-bold tracking-tight"
         >
-          <span className="text-slate-100 font-resolve">João Luis</span>
-          <span className="text-sky-400 font-semibold"> DEV</span>
+          <span className="text-slate-100 font-resolve">{brandName}</span>
+          <span className="text-sky-400 font-semibold">{brandHighlight}</span>
         </motion.a>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           <div className="flex items-center gap-6">
-            {navLinks.map((link, index) => (
+            {links.map((link, index) => (
               <motion.a
                 key={link.name}
                 href={link.href}
@@ -125,55 +135,53 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div
-            ref={resumeRef}
-            className="relative pl-6 border-l border-slate-800"
-          >
-            <button
-              onClick={() => setIsResumeOpen(!isResumeOpen)}
-              className="
-                flex items-center gap-2
-                px-5 py-2 rounded-md
-                border border-sky-500/40
-                text-sky-400 text-xs
-                hover:bg-sky-500/10
-                transition-all tracking-widest
-              "
+          {resume && (
+            <div
+              ref={resumeRef}
+              className="relative pl-6 border-l border-slate-800"
             >
-              Currículo
-              <ChevronDown size={14} />
-            </button>
+              <button
+                onClick={() => setIsResumeOpen(!isResumeOpen)}
+                className="
+                  flex items-center gap-2
+                  px-5 py-2 rounded-md
+                  border border-sky-500/40
+                  text-sky-400 text-xs
+                  hover:bg-sky-500/10
+                  transition-all tracking-widest
+                "
+              >
+                Currículo
+                <ChevronDown size={14} />
+              </button>
 
-            <AnimatePresence>
-              {isResumeOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
-                  className="
-                    absolute right-0 mt-2 w-40
-                    bg-black border border-slate-800
-                    rounded-md shadow-xl overflow-hidden
-                  "
-                >
-                  <a
-                    href="../../public/joaoluis_curriculo_fullstack.pdf"
-                    download
-                    className="block px-4 py-3 text-xs text-slate-300 hover:bg-slate-800"
+              <AnimatePresence>
+                {isResumeOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    className="
+                      absolute right-0 mt-2 w-40
+                      bg-black border border-slate-800
+                      rounded-md shadow-xl overflow-hidden
+                    "
                   >
-                    Baixar PDF
-                  </a>
-                  <a
-                    href="../../public/joaoluis_curriculo_fullstack.docx"
-                    download
-                    className="block px-4 py-3 text-xs text-slate-300 hover:bg-slate-800"
-                  >
-                    Baixar DOCX
-                  </a>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+                    {resume.map((item) => (
+                      <a
+                        key={item.label}
+                        href={item.href}
+                        download
+                        className="block px-4 py-3 text-xs text-slate-300 hover:bg-slate-800"
+                      >
+                        {item.label}
+                      </a>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          )}
         </div>
 
         <div className="md:hidden">
@@ -199,7 +207,7 @@ export default function Navbar() {
             className="md:hidden bg-black border-b border-slate-800"
           >
             <div className="flex flex-col items-center gap-6 p-8">
-              {navLinks.map((link) => (
+              {links.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
@@ -214,53 +222,51 @@ export default function Navbar() {
               ))}
 
               {/* Currículo Mobile */}
-              <div className="w-full flex flex-col items-center gap-2">
-                <button
-                  onClick={() => setIsResumeOpen(!isResumeOpen)}
-                  className="
-                    w-full max-w-xs
-                    flex items-center justify-center gap-2
-                    px-5 py-2 rounded-md
-                    border border-sky-500/40
-                    text-sky-400 text-sm
-                    hover:bg-sky-500/10
-                    transition-all tracking-widest
-                  "
-                >
-                  Currículo
-                  <ChevronDown size={14} />
-                </button>
+              {resume && (
+                <div className="w-full flex flex-col items-center gap-2">
+                  <button
+                    onClick={() => setIsResumeOpen(!isResumeOpen)}
+                    className="
+                      w-full max-w-xs
+                      flex items-center justify-center gap-2
+                      px-5 py-2 rounded-md
+                      border border-sky-500/40
+                      text-sky-400 text-sm
+                      hover:bg-sky-500/10
+                      transition-all tracking-widest
+                    "
+                  >
+                    Currículo
+                    <ChevronDown size={14} />
+                  </button>
 
-                <AnimatePresence>
-                  {isResumeOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -6 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -6 }}
-                      className="
-                        w-full max-w-xs
-                        bg-black border border-slate-800
-                        rounded-md shadow-xl overflow-hidden
-                      "
-                    >
-                      <a
-                        href="../../public/joaoluis_curriculo_fullstack.pdf"
-                        download
-                        className="block px-4 py-3 text-xs text-slate-300 hover:bg-slate-800 text-center"
+                  <AnimatePresence>
+                    {isResumeOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -6 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -6 }}
+                        className="
+                          w-full max-w-xs
+                          bg-black border border-slate-800
+                          rounded-md shadow-xl overflow-hidden
+                        "
                       >
-                        Baixar PDF
-                      </a>
-                      <a
-                        href="../../public/joaoluis_curriculo_fullstack.docx"
-                        download
-                        className="block px-4 py-3 text-xs text-slate-300 hover:bg-slate-800 text-center"
-                      >
-                        Baixar DOCX
-                      </a>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+                        {resume.map((item) => (
+                          <a
+                            key={item.label}
+                            href={item.href}
+                            download
+                            className="block px-4 py-3 text-xs text-slate-300 hover:bg-slate-800 text-center"
+                          >
+                            {item.label}
+                          </a>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              )}
             </div>
           </motion.div>
         )}
