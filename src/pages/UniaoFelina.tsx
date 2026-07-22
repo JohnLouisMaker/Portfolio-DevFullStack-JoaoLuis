@@ -1,3 +1,4 @@
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import About from "../sections/uniao-felina/About";
 
@@ -20,10 +21,20 @@ export default function UniaoFelina() {
         <div className="absolute -left-24 top-[86%] w-72 h-72 md:w-96 md:h-96 bg-[#38BDF8]/10 rounded-full blur-3xl" />
       </div>
 
+      <Navbar
+        brandName="João Luis"
+        brandHighlight="DEV"
+        links={[
+          { name: "Sobre", href: "#about" },
+          { name: "Tecnologias", href: "#techs" },
+          { name: "Showroom", href: "#showroom" },
+        ]}
+      />
 
       <main className="relative">
         <About />
       </main>
+
       <Footer />
     </div>
   );

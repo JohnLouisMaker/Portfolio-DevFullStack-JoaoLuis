@@ -45,7 +45,7 @@ export default function TerminalWindow() {
         <div className="p-6 font-mono text-sm md:text-base leading-relaxed bg-black">
           <div className="flex items-start gap-2">
             <span className="text-[#38BDF8]">➜</span>
-            <span className="text-[#6366F1]">~/dev</span>
+            <span className="text-[#fff700]">~/dev</span>
             <span className="text-slate-500">
               git:(<span className="text-[#38BDF8]">main</span>)
             </span>

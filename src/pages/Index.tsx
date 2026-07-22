@@ -27,7 +27,17 @@ const Index = () => {
         <div className="absolute -left-24 top-[86%] w-72 h-72 md:w-96 md:h-96 bg-[#38BDF8]/10 rounded-full blur-3xl" />
       </div>
 
-      <Navbar />
+      <Navbar brandName="João Luis" brandHighlight="Dev" 
+        links={[
+          { name: "Início", href: "#" }, 
+          { name: "Sobre", href: "#" }, 
+          { name: "Contato", href: "#" }]} 
+          
+          
+       resume={[
+          { label: "Baixar PDF", href: "/joaoluis_curriculo_fullstack.pdf" },
+          { label: "Baixar DOCX", href: "/joaoluis_curriculo_fullstack.docx" },
+        ]} />
       <main className="relative">
         <Hero />
         <About />

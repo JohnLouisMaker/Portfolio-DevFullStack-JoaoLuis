@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Download, Folder } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-import TerminalWindow from "../../components/terminal";
+import TerminalWindow from "../../components/Terminal";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -55,7 +55,7 @@ export default function Hero() {
             João Luis!
           </span>
           <span className="block mt-2 text-xl sm:text-2xl md:text-3xl text-slate-400 font-resolve tracking-wide">
-            Desenvolvedor Web
+            Desenvolvedor Web Full Stack
           </span>
         </motion.h1>
 

@@ -106,9 +106,9 @@ export default function Navbar({ brandName, brandHighlight, links, resume }: Nav
         <motion.a
           href="#"
           whileHover={{ scale: 1.03 }}
-          className="text-2xl font-bold tracking-tight"
+          className="text-2xl font-bold "
         >
-          <span className="text-slate-100 font-resolve">{brandName}</span>
+          <span className="text-slate-100 font-resolve text-xl">{brandName}</span>
           <span className="text-sky-400 font-semibold">{brandHighlight}</span>
         </motion.a>
 
