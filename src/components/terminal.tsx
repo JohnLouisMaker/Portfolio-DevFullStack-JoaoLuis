@@ -27,7 +27,7 @@ export default function TerminalWindow() {
 
   return (
     <div className="w-full max-w-2xl mx-auto mt-12 group">
-      {/* Background Deep Navy (#0F172A) com bordas em Sky Blue (#38BDF8) */}
+      {/* Terminal */}
       <div className="bg-[#0F172A]/80 backdrop-blur-md border border-[#38BDF8]/20 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:border-[#38BDF8]/50 shadow-[#38BDF8]/5">
         <div className="bg-[#020617] px-4 py-3 flex items-center justify-between border-b border-[#38BDF8]/10">
           <div className="flex gap-2">
@@ -60,7 +60,7 @@ export default function TerminalWindow() {
       </div>
 
       {/* Glow inferior seguindo o degradê Electric Cyber */}
-      <div className="h-1 bg-linear-to-r from-transparent via-[#38BDF8]/30 to-transparent mx-auto mt-2 rounded-full max-w-[200px] blur-sm" />
+      <div className="h-1 bg-linear-to-r from-transparent via-[#38BDF8]/30 to-transparent mx-auto mt-2 rounded-full max-w-50 blur-sm" />
     </div>
   );
 }

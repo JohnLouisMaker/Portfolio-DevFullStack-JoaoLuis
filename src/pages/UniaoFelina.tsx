@@ -1,14 +1,7 @@
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import About from "../sections/index/About";
-import Contact from "../sections/index/Contact";
-import Experience from "../sections/index/Experience";
-import Formation from "../sections/index/Formation";
-import Hero from "../sections/index/Hero";
-import Projects from "../sections/index/Projects";
-import Skills from "../sections/index/Skills";
+import About from "../sections/uniao-felina/About";
 
-const Index = () => {
+export default function UniaoFelina() {
   return (
     <div className="relative isolate overflow-hidden bg-[#020617]">
       <div
@@ -27,19 +20,11 @@ const Index = () => {
         <div className="absolute -left-24 top-[86%] w-72 h-72 md:w-96 md:h-96 bg-[#38BDF8]/10 rounded-full blur-3xl" />
       </div>
 
-      <Navbar />
+
       <main className="relative">
-        <Hero />
         <About />
-        <Experience />
-        <Projects />
-        <Formation />
-        <Skills />
-        <Contact />
       </main>
       <Footer />
     </div>
   );
-};
-
-export default Index;
+}

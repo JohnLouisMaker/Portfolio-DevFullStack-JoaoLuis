@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Download, Folder } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-import TerminalWindow from "../components/terminal";
+import TerminalWindow from "../../components/terminal";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },

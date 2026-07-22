@@ -2,10 +2,11 @@ import { easeOut, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
-import cinezaImg from "../assets/img/cineza.png";
-import deliverImg from "../assets/img/deliver-food.png";
-import fortaldados from "../assets/img/fortaldados.png";
-import ufelina from "../assets/img/ufelina.png";
+import { Link } from "react-router-dom";
+import cinezaImg from "../../assets/img/cineza.png";
+import deliverImg from "../../assets/img/deliver-food.png";
+import fortaldados from "../../assets/img/fortaldados.png";
+import ufelina from "../../assets/img/ufelina.png";
 
 const projects = [
   {
@@ -23,6 +24,7 @@ const projects = [
     github: "https://github.com/JohnLouisMaker/uniao-felina-website",
     live: "https://uniao-felina-website.vercel.app/",
     featured: true,
+    link: "/uniao-felina",
   },
   {
     title: "Python + FastAPI: Sistema de Pedidos",
@@ -39,8 +41,9 @@ const projects = [
       "TypeScript",
     ],
     github: "https://github.com/JohnLouisMaker/deliver-backend",
-    live: "",
+    live: "https://deliver-frontend-three.vercel.app/",
     featured: true,
+    link: "/deliver",
   },
   {
     title: "FortalDados: ChatBot + LLM",
@@ -51,6 +54,7 @@ const projects = [
     github: "https://github.com/JohnLouisMaker/fortal-dados",
     live: "https://fortal-dados.vercel.app",
     featured: true,
+    link: "/fortal-dados",
   },
   {
     title: "Cineza: Plataforma de filmes (TMDb)",
@@ -61,6 +65,7 @@ const projects = [
     github: "https://github.com/JohnLouisMaker/cineza",
     live: "https://cineza-beta.vercel.app/",
     featured: true,
+    link: "/cineza",
   },
 ];
 
@@ -81,7 +86,7 @@ const motionProps = {
 };
 
 const cardBase =
-  "bg-[#020617] border border-slate-800 hover:border-sky-500/50 transition-all h-full flex flex-col";
+  "bg-[#020617] border border-slate-800 hover:border-sky-500/50 transition-all h-full flex flex-col cursor-pointer";
 
 function getMaxIndex(width: number) {
   if (width >= 1024) return projects.length - 3;
@@ -103,12 +108,13 @@ function getGapOffset(width: number) {
 
 function ProjectLinks({ github, live }: { github: string; live: string }) {
   return (
-    <div className="flex gap-4 pt-6 mt-auto">
+    <div className="flex gap-4 pt-6 mt-auto relative z-10">
       <a
         href={github}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-slate-400 hover:text-sky-400"
+        className="text-slate-400 hover:text-sky-400 transition-colors"
+        onClick={(e) => e.stopPropagation()}
       >
         <FaGithub className="w-7 h-7" />
       </a>
@@ -117,7 +123,8 @@ function ProjectLinks({ github, live }: { github: string; live: string }) {
           href={live}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-slate-400 hover:text-sky-400"
+          className="text-slate-400 hover:text-sky-400 transition-colors"
+          onClick={(e) => e.stopPropagation()}
         >
           <ExternalLink className="w-7 h-7" />
         </a>
@@ -183,12 +190,8 @@ export default function Projects() {
   } as React.CSSProperties;
 
   return (
-    <section
-      id="projects"
-      className="py-22 text-slate-100 overflow-hidden"
-    >
+    <section id="projects" className="py-22 text-slate-100 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Cabeçalho */}
         <motion.div {...motionProps} viewport={{ once: true, amount: 0.3 }}>
           <h2 className="text-3xl md:text-4xl font-resolve text-center mb-4">
             Projetos em <span className="text-sky-400">Destaque</span>
@@ -198,7 +201,6 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        {/* Carrossel */}
         <div className="relative">
           <div className="overflow-hidden w-full py-4 px-1">
             <motion.div
@@ -209,45 +211,46 @@ export default function Projects() {
               transition={{ type: "spring", stiffness: 260, damping: 28 }}
               style={carouselStyle}
             >
-              {projects.map((project, i) => (
+              {projects.map((project) => (
                 <div
                   key={project.title}
                   className="w-[calc(100%-17px)] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0"
                 >
-                  <motion.div
-                    className={`group font-rimouski rounded-2xl overflow-hidden ${cardBase}`}
-                  >
-                    <div className="aspect-video overflow-hidden">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-                      />
-                    </div>
+                  <Link to={project.link} className="block h-full">
+                    <motion.div
+                      className={`group font-rimouski rounded-2xl overflow-hidden ${cardBase}`}
+                    >
+                      <div className="aspect-video overflow-hidden">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                        />
+                      </div>
 
-                    <div className="p-6 flex flex-col flex-1">
-                      <h3 className="text-lg font-semibold mb-2 group-hover:text-sky-400">
-                        {project.title}
-                      </h3>
+                      <div className="p-6 flex flex-col flex-1">
+                        <h3 className="text-lg font-semibold mb-2 group-hover:text-sky-400 transition-colors">
+                          {project.title}
+                        </h3>
 
-                      <p className="text-sm text-slate-400 mb-4 line-clamp-3">
-                        {project.description}
-                      </p>
+                        <p className="text-sm text-slate-400 mb-4 line-clamp-3">
+                          {project.description}
+                        </p>
 
-                      <Tags tags={project.tags} />
+                        <Tags tags={project.tags} />
 
-                      <ProjectLinks
-                        github={project.github}
-                        live={project.live}
-                      />
-                    </div>
-                  </motion.div>
+                        <ProjectLinks
+                          github={project.github}
+                          live={project.live}
+                        />
+                      </div>
+                    </motion.div>
+                  </Link>
                 </div>
               ))}
             </motion.div>
           </div>
 
-          {/* Botões de Navegação Flutuantes */}
           <div className="flex justify-center items-center gap-4 mt-3">
             <button
               onClick={handlePrev}
@@ -277,7 +280,6 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Indicadores de bolinha (Dots) */}
         <div className="flex justify-center gap-1.5 mt-4">
           {projects.map((_, index) => {
             const maxDots =
