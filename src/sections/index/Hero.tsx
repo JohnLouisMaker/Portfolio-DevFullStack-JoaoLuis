@@ -34,7 +34,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-10 pt-50">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden px-10 pt-50">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 -left-40 w-72 h-72 md:w-96 md:h-96 bg-[#38BDF8]/20 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-20 -right-40 w-72 h-72 md:w-96 md:h-96 bg-[#6366F1]/10 rounded-full blur-3xl animate-float delay-2000" />

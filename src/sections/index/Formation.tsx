@@ -1,4 +1,4 @@
-import { motion, easeOut } from "framer-motion";
+import { easeOut, motion } from "framer-motion";
 
 const education = [
   {
@@ -37,7 +37,7 @@ const fadeInUp = {
 
 export default function Formation() {
   return (
-    <section id="formation" className="py-10 text-slate-100">
+    <section id="formation" className="py-24 md:py-28 text-slate-100">
       <div className="max-w-6xl mx-auto px-6">
         {/* Título */}
         <motion.div
@@ -52,7 +52,7 @@ export default function Formation() {
           </h2>
         </motion.div>
 
-        <div className="mt-12 grid md:grid-cols-2 gap-8">
+        <div className="mt-10 grid md:grid-cols-2 gap-8">
           {/* Formação Acadêmica */}
           <motion.div
             initial="hidden"

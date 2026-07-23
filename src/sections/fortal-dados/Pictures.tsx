@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
 import { Camera } from "lucide-react";
-import ufelina from "../../assets/img/ufelina.png";
+import mapaFortaleza from "../../assets/img/fortaldados.png";
 
 const galleryItems = [
   {
     title: "Foto 01",
-    image: ufelina,
+    image: mapaFortaleza,
   },
   {
     title: "Foto 02",
-    image: ufelina,
+    image: mapaFortaleza,
   },
   {
     title: "Foto 03",
-    image: ufelina,
+    image:  mapaFortaleza,
   },
 ];
 

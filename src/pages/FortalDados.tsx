@@ -1,10 +1,10 @@
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import About from "../sections/uniao-felina/About";
-import Pictures from "../sections/uniao-felina/Pictures";
-import Stack from "../sections/uniao-felina/Stack";
+import Navbar from "../components/Navbar";
+import About from "../sections/fortal-dados/About";
+import Pictures from "../sections/fortal-dados/Pictures";
+import Stack from "../sections/fortal-dados/Stack";
 
-export default function UniaoFelina() {
+export default function FortalDados() {
   return (
     <div className="relative isolate overflow-hidden bg-[#020617]">
       <div

@@ -190,7 +190,10 @@ export default function Projects() {
   } as React.CSSProperties;
 
   return (
-    <section id="projects" className="py-22 text-slate-100 overflow-hidden">
+    <section
+      id="projects"
+      className="py-24 md:py-28 text-slate-100 overflow-hidden"
+    >
       <div className="max-w-6xl mx-auto px-6">
         <motion.div {...motionProps} viewport={{ once: true, amount: 0.3 }}>
           <h2 className="text-3xl md:text-4xl font-resolve text-center mb-4">

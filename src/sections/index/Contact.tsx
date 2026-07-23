@@ -40,7 +40,10 @@ const fadeInUp = {
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 font-resolve text-slate-100">
+    <section
+      id="contact"
+      className="py-24 md:py-28 font-resolve text-slate-100"
+    >
       <div className="max-w-6xl mx-auto px-5">
         {/* Título */}
         <motion.div

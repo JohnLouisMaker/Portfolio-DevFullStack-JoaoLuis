@@ -1,38 +1,33 @@
 import { motion } from "framer-motion";
-import {
-  ArrowUpRight,
-  Github,
-  Layers3,
-  Palette,
-  Rocket,
-  Sparkles,
-} from "lucide-react";
+import { ArrowUpRight, Github, Layers3, Rocket, Server } from "lucide-react";
 
 const stack = [
   {
-    title: "React",
-    description: "Estrutura principal da interface e do fluxo de componentes.",
+    title: "React + TypeScript",
+    description: "Interface do mapa e do chatbot, com tipagem segura via Vite.",
     icon: Rocket,
   },
   {
-    title: "TypeScript",
-    description: "Tipagem segura para organização do projeto e manutenção.",
+    title: "Leaflet + MapTiler",
+    description:
+      "Mapas interativos, camadas de bairros, heatmap e paradas de ônibus.",
     icon: Layers3,
   },
   {
-    title: "Tailwind CSS",
+    title: "FastAPI",
     description:
-      "Estilização moderna, responsiva e com foco na identidade visual.",
-    icon: Palette,
+      "API REST em Python responsável pelos endpoints de dados e chat.",
+    icon: Server,
   },
   {
-    title: "Framer Motion",
-    description: "Animações leves e suaves para enriquecer a experiência.",
-    icon: Sparkles,
+    title: "Pandas + GeoPandas",
+    description:
+      "Processamento geoespacial dos dados públicos da ETUFOR e da AMC.",
+    icon: Layers3,
   },
 ];
 
-export default function Techs() {
+export default function Stack() {
   return (
     <section id="techs" className="py-24 text-slate-100">
       <div className="max-w-6xl mx-auto px-6">
@@ -47,8 +42,9 @@ export default function Techs() {
             Stack E <span className="text-sky-400">Showroom</span>
           </h2>
           <p className="max-w-2xl mx-auto text-slate-400 font-rounded tracking-wider">
-            A construção do projeto envolveu uma combinação de ferramentas que
-            favorecem velocidade, organização e uma aparência profissional.
+            A construção do projeto envolveu um backend em Python para processar
+            dados públicos e um frontend em React focado em visualização
+            geoespacial e interação com IA.
           </p>
         </motion.div>
 
@@ -94,14 +90,14 @@ export default function Techs() {
               Projeto aberto para conhecer, revisar e evoluir
             </h3>
             <p className="text-slate-400 font-rounded tracking-wider leading-8 mb-6">
-              O repositório reúne a estrutura do projeto e a visão do trabalho
-              desenvolvido, servindo como referência para quem quer explorar o
-              processo de criação e as decisões de interface.
+              O repositório reúne o backend FastAPI, o processamento de dados e
+              o frontend React, servindo como referência para quem quer explorar
+              mobilidade urbana com dados reais e IA.
             </p>
 
             <div className="flex flex-wrap gap-3">
               <a
-                href="https://github.com/JohnLouisMaker/uniao-felina-website"
+                href="https://github.com/JohnLouisMaker/fortal-dados"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-sky-500/40 bg-sky-500/10 px-4 py-2 text-sm text-sky-300 transition hover:bg-sky-500/20"
@@ -111,7 +107,7 @@ export default function Techs() {
                 <ArrowUpRight className="w-4 h-4" />
               </a>
               <a
-                href="https://uniao-felina-website.vercel.app"
+                href="https://fortal-dados.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-slate-700 px-4 py-2 text-sm text-slate-300 transition hover:border-sky-500/40 hover:text-sky-300"

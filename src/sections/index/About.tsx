@@ -28,7 +28,7 @@ const fadeInUp = {
 
 export default function About() {
   return (
-    <section id="about" className="py-27 text-slate-100">
+    <section id="about" className="py-24 md:py-28 text-slate-100">
       <div className="max-w-6xl mx-auto px-6">
         {/* Título */}
         <motion.div

@@ -42,7 +42,7 @@ export default function Experience() {
     setIsOpen(!isOpen);
   };
   return (
-    <section id="experience" className="py-2 text-slate-100">
+    <section id="experience" className="py-24 md:py-28 text-slate-100">
       <div className="max-w-4xl lg:max-w-6xl mx-auto px-6">
         <motion.div
           initial="hidden"
@@ -56,7 +56,7 @@ export default function Experience() {
         </motion.div>
 
         {/* Experiência Profissional */}
-        <div className="mt-13 max-w-3xl mx-auto">
+        <div className="mt-10 max-w-3xl mx-auto">
           {xp.map((job, idx) => (
             <motion.div
               key={job.title}

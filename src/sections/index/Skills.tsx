@@ -1,4 +1,4 @@
-import { motion, easeOut } from "framer-motion";
+import { easeOut, motion } from "framer-motion";
 
 const skillCategories = [
   {
@@ -26,7 +26,7 @@ const fadeInUp = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 text-slate-100">
+    <section id="skills" className="py-24 md:py-28 text-slate-100">
       <div className="max-w-6xl mx-auto px-6">
         {/* Título */}
         <motion.div
