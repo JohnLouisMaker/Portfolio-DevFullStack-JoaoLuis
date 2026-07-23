@@ -48,7 +48,7 @@ export default function About() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 ">
           {/* Texto */}
           <motion.div
             initial="hidden"
@@ -108,7 +108,7 @@ export default function About() {
           </motion.div>
 
           {/* Cards */}
-          <div className="grid gap-4">
+          <div className="flex flex-col gap-4">
             {highlights.map((item, index) => (
               <motion.div
                 key={item.title}

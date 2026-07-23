@@ -1,6 +1,8 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import About from "../sections/uniao-felina/About";
+import Pictures from "../sections/uniao-felina/Pictures";
+import Techs from "../sections/uniao-felina/Techs";
 
 export default function UniaoFelina() {
   return (
@@ -22,17 +24,17 @@ export default function UniaoFelina() {
       </div>
 
       <Navbar
-        brandName="João Luis"
-        brandHighlight="DEV"
         links={[
           { name: "Sobre", href: "#about" },
-          { name: "Tecnologias", href: "#techs" },
-          { name: "Showroom", href: "#showroom" },
+          { name: "Galeria", href: "#gallery" },
+          { name: "Stack E Showroom", href: "#stack" },
         ]}
       />
 
       <main className="relative">
         <About />
+        <Pictures />
+        <Techs/>
       </main>
 
       <Footer />

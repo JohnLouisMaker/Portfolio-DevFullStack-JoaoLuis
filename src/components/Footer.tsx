@@ -12,7 +12,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#000000] font-resolve">
+    <footer className="font-resolve">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Texto */}

@@ -6,19 +6,19 @@ const highlights = [
     icon: PawPrint,
     title: "Resgate e Cuidado",
     description:
-      "Atuamos no resgate, acolhimento e atendimento veterinário de gatos em situação de rua.",
+      "Missão principal da União Felina é resgatar animais abandonados e proporcionar um lar seguro, carinho e tratamento adequado.",
   },
   {
     icon: HeartHandshake,
     title: "Adoção Responsável",
     description:
-      "Promovemos adoções seguras, exibindo cada animal com carinho e responsabilidade.",
+      "Trabalhamos para promover a adoção consciente, realizando triagem, acompanhamento e orientação aos adotantes.",
   },
   {
     icon: Sparkles,
     title: "Conscientização",
     description:
-      "Trabalhamos para educar a comunidade e fortalecer a proteção animal em Fortaleza.",
+      "Buscamos sensibilizar a sociedade sobre a importância da causa animal e da guarda responsável.",
   },
 ];
 
@@ -29,7 +29,7 @@ const fadeInUp = {
 
 export default function About() {
   return (
-    <section id="about" className="py-24 text-slate-100">
+    <section id="about" className="pt-45 text-slate-100">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial="hidden"
@@ -42,13 +42,13 @@ export default function About() {
             Sobre a <span className="text-sky-400">União Felina</span>
           </h2>
           <p className="max-w-2xl mx-auto mb-16 text-center text-slate-400 font-rounded tracking-wider">
-            A União Felina é uma iniciativa sem fins lucrativos dedicada a
-            cuidar, proteger e encontrar novos lares para gatos em situação de
-            vulnerabilidade.
+            Centralização de informações e recursos para ajudar os animais
+            abandonados da União Felina. Rascunho de um projeto de conclusão de
+            curso.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -58,21 +58,21 @@ export default function About() {
             className="space-y-6"
           >
             <p className="text-lg text-slate-400 font-rounded tracking-wider">
-              Nossa missão é resgatar gatos abandonados ou em risco, oferecer
-              cuidados veterinários e dar apoio para que eles encontrem novos
-              lares cheios de amor.
+              Desenvolvido em parceria com colegas da Unifametro, participei
+              ativamente da criação do layout e do frontend deste projeto. Foi
+              um dos meus primeiros trabalhos completos e representou um grande
+              aprendizado em design, usabilidade e desenvolvimento front-end.
             </p>
 
             <p className="text-lg text-slate-400 font-rounded tracking-wider">
-              Atuamos em Fortaleza com voluntários, parcerias locais e campanhas
-              de conscientização que ajudam a reduzir o abandono e aumentar a
-              adoção responsável.
+              É possível visualizar o projeto completo no GitHub ou no meu
+              Showroom.
             </p>
 
             <p className="text-lg text-slate-400 font-rounded tracking-wider">
-              Este site foi criado para apresentar o trabalho da ONG, facilitar
-              o contato com apoiadores e aproximar pessoas dispostas a ajudar
-              esses felinos a encontrarem um futuro melhor.
+              Este site foi criado com o propósito de transmitir a essência do
+              trabalho da União Felina: a responsabilidade, a dedicação e a
+              crença de que pequenos gestos podem transformar vidas.
             </p>
           </motion.div>
 

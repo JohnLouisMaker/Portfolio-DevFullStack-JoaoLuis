@@ -1,6 +1,8 @@
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence, easeOut } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { AnimatePresence, easeOut, motion } from "framer-motion";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import JoaoLuisDev from "../assets/img/joao-luis-dev-banner.png";
 
 interface NavLink {
   name: string;
@@ -13,8 +15,6 @@ interface ResumeProps {
 }
 
 interface NavbarProps {
-  brandName: string;
-  brandHighlight: string;
   links: NavLink[];
   resume?: ResumeProps[];
 }
@@ -28,7 +28,7 @@ const fadeInUp = {
   },
 };
 
-export default function Navbar({ brandName, brandHighlight, links, resume }: NavbarProps) {
+export default function Navbar({ links, resume }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScroll, setLastScroll] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -48,7 +48,7 @@ export default function Navbar({ brandName, brandHighlight, links, resume }: Nav
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
-      const tolerance = 23;
+      const tolerance = 21;
 
       if (isNavigating) return;
 
@@ -97,21 +97,20 @@ export default function Navbar({ brandName, brandHighlight, links, resume }: Nav
         transition-all duration-500
         ${
           isScrolled
-            ? "py-3 bg-black/80 backdrop-blur-xl border-b border-slate-800"
+            ? "py-1 bg-gray-950/70 backdrop-blur-xl border-b border-slate-800"
             : "py-6 bg-transparent"
         }
       `}
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12">
-        <motion.a
-          href="#"
-          whileHover={{ scale: 1.03 }}
-          className="text-2xl font-bold "
-        >
-          <span className="text-slate-100 font-resolve text-xl">{brandName}</span>
-          <span className="text-sky-400 font-semibold">{brandHighlight}</span>
-        </motion.a>
-
+        <Link to="/" className="flex items-center">
+          <motion.img
+            src={JoaoLuisDev}
+            alt="João Luís Dev Logo"
+            whileHover={{ scale: 1.05 }}
+            className="h-14 md:h-16 w-auto object-contain cursor-pointer transition-transform translate-y-1.5"
+          />
+        </Link>
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           <div className="flex items-center gap-6">

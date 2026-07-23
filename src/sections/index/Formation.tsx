@@ -37,7 +37,7 @@ const fadeInUp = {
 
 export default function Formation() {
   return (
-    <section id="education" className="py-10 text-slate-100">
+    <section id="formation" className="py-10 text-slate-100">
       <div className="max-w-6xl mx-auto px-6">
         {/* Título */}
         <motion.div
