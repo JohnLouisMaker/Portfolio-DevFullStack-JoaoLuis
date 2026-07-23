@@ -1,42 +1,32 @@
 import { motion } from "framer-motion";
-import {
-  ArrowUpRight,
-  Github,
-  Layers3,
-  Palette,
-  Rocket,
-  Sparkles,
-} from "lucide-react";
+import { ArrowUpRight, Github, Rocket, Globe, Film } from "lucide-react";
 
 const stack = [
   {
     title: "React",
-    description: "Estrutura principal da interface e do fluxo de componentes.",
+    description: "Biblioteca principal para construção da interface de usuário dinâmica e reativa.",
     icon: Rocket,
   },
   {
-    title: "TypeScript",
-    description: "Tipagem segura para organização do projeto e manutenção.",
-    icon: Layers3,
+    title: "Vite",
+    description: "Build tool e servidor de desenvolvimento ultrarrápido para aplicações React.",
+    icon: Rocket,
   },
   {
-    title: "Tailwind CSS",
-    description:
-      "Estilização moderna, responsiva e com foco na identidade visual.",
-    icon: Palette,
+    title: "TMDB API",
+    description: "API pública utilizada para buscar dados de filmes, pôsteres e avaliações em tempo real.",
+    icon: Film,
   },
   {
-    title: "Framer Motion",
-    description: "Animações leves e suaves para enriquecer a experiência.",
-    icon: Sparkles,
+    title: "Vercel Deploy",
+    description: "Hospedagem e integração contínua para publicação do ambiente de produção.",
+    icon: Globe,
   },
 ];
 
 export default function Stack() {
   return (
-    <section id="stack
-    
-    " className="py-24 text-slate-100">
+    <section id="techs" className="py-24 text-slate-100">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -49,8 +39,8 @@ export default function Stack() {
             Stack E <span className="text-sky-400">Showroom</span>
           </h2>
           <p className="max-w-2xl mx-auto text-slate-400 font-rounded tracking-wider">
-            A construção do projeto envolveu uma combinação de ferramentas que
-            favorecem velocidade, organização e uma aparência profissional.
+            A construção do Cineza envolve um ecossistema moderno em React focado
+            na rápida renderização e requisição de dados em tempo real da API do TMDB.
           </p>
         </motion.div>
 
@@ -93,17 +83,16 @@ export default function Stack() {
               Sala De Apresentação
             </p>
             <h3 className="text-2xl font-rimouski text-slate-100 mb-4">
-              Projeto aberto para conhecer, revisar e evoluir
+              Projeto aberto para consultar, testar e contribuir
             </h3>
             <p className="text-slate-400 font-rounded tracking-wider leading-8 mb-6">
-              O repositório reúne a estrutura do projeto e a visão do trabalho
-              desenvolvido, servindo como referência para quem quer explorar o
-              processo de criação e as decisões de interface.
+              O repositório traz a estrutura completa da aplicação React para consumo de
+              APIs externas de filmes, pronto para rodar localmente ou ser implantado.
             </p>
 
             <div className="flex flex-wrap gap-3">
               <a
-                href="https://github.com/JohnLouisMaker/uniao-felina-website"
+                href="https://github.com/JohnLouisMaker/cineza"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-sky-500/40 bg-sky-500/10 px-4 py-2 text-sm text-sky-300 transition hover:bg-sky-500/20"
@@ -113,7 +102,7 @@ export default function Stack() {
                 <ArrowUpRight className="w-4 h-4" />
               </a>
               <a
-                href="https://uniao-felina-website.vercel.app"
+                href="https://cineza-beta.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-slate-700 px-4 py-2 text-sm text-slate-300 transition hover:border-sky-500/40 hover:text-sky-300"

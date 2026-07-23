@@ -46,7 +46,7 @@ export default function Pictures() {
               whileHover={{ scale: 1.01 }}
               className="group cursor-pointer overflow-hidden rounded-3xl border border-slate-800 bg-[#020617]/80 backdrop-blur"
             >
-              <div className="py-6 md:aspect-4/3 overflow-hidden bg-slate-900 ">
+              <div className=" md:aspect-4/3 overflow-hidden bg-slate-900 ">
                 <img
                   src={item.image}
                   alt={item.title}
