@@ -13,7 +13,6 @@ const App = () => (
        <Route path="/deliver" element={<DeliverMenuu />} />
       <Route path="/fortal-dados" element={<FortalDados />} />
       <Route path="/cineza" element={<Cineza/>} />
-      
     </Routes>
   </BrowserRouter>
 );

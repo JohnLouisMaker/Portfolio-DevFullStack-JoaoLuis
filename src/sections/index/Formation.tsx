@@ -1,4 +1,6 @@
-import { easeOut, motion } from "framer-motion";
+import { AnimatePresence, easeOut, motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 const education = [
   {
@@ -36,9 +38,12 @@ const fadeInUp = {
 };
 
 export default function Formation() {
+  const [isOpenEdu, setIsOpenEdu] = useState(false);
+  const [isOpenQual, setIsOpenQual] = useState(false);
+
   return (
     <section id="formation" className="py-24 md:py-28 text-slate-100">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-4xl lg:max-w-6xl mx-auto px-6">
         {/* Título */}
         <motion.div
           initial="hidden"
@@ -52,7 +57,8 @@ export default function Formation() {
           </h2>
         </motion.div>
 
-        <div className="mt-10 grid md:grid-cols-2 gap-8">
+        {/* Container Centralizado com a mesma largura do Experience */}
+        <div className="mt-10 max-w-3xl mx-auto space-y-6">
           {/* Formação Acadêmica */}
           <motion.div
             initial="hidden"
@@ -60,24 +66,58 @@ export default function Formation() {
             viewport={{ once: true }}
             variants={fadeInUp}
             transition={{ delay: 0.1 }}
-            className="p-6 rounded-2xl bg-[#020617] border border-slate-800"
+            className="px-8 pt-6 pb-6 rounded-2xl bg-[#020617] border border-slate-800 hover:border-sky-500/25 transition-all duration-300 shadow-xl"
           >
-            <h3 className="text-xl font-rounded mb-6">Formação Acadêmica</h3>
-            <ul className="space-y-6 text-slate-200 font-resolve">
-              {education.map((edu) => (
-                <li key={edu.degree} className="flex flex-col">
-                  <span className="font-semibold text-sky-400">
-                    {edu.degree}
-                  </span>
-                  <span className="text-sm text-slate-400">
-                    {edu.institution}
-                  </span>
-                  <span className="text-sm text-slate-500 italic">
-                    {edu.period}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <div className="flex items-start justify-between">
+              <div>
+                <h3 className="text-xl font-semibold text-sky-400 font-resolve">
+                  Formação Acadêmica
+                </h3>
+              </div>
+
+              <button
+                onClick={() => setIsOpenEdu(!isOpenEdu)}
+                className="text-sky-400 hover:text-sky-300 transition-colors p-1"
+                aria-label="Expandir detalhes"
+              >
+                <ChevronDown
+                  className={`${
+                    isOpenEdu ? "rotate-180" : "rotate-0"
+                  } transition-transform duration-300`}
+                />
+              </button>
+            </div>
+
+            <AnimatePresence initial={false}>
+              {isOpenEdu && (
+                <motion.div
+                  key="content-edu"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <div className="mt-6 pt-6 border-t border-slate-800/80">
+                    <ul className="space-y-6 text-slate-200 font-resolve">
+                      {education.map((edu) => (
+                        <li key={edu.degree} className="flex flex-col">
+                          <span className="font-semibold text-sky-400">
+                            {edu.degree}
+                          </span>
+                          <span className="text-sm text-slate-400 mt-1">
+                            {edu.institution}
+                          </span>
+                          <span className="text-sm text-slate-500 italic mt-0.5">
+                            {edu.period}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
 
           {/* Qualificações */}
@@ -87,22 +127,58 @@ export default function Formation() {
             viewport={{ once: true }}
             variants={fadeInUp}
             transition={{ delay: 0.2 }}
-            className="p-6 rounded-2xl bg-[#020617] border border-slate-800"
+            className="px-8 pt-6 pb-6 rounded-2xl bg-[#020617] border border-slate-800 hover:border-sky-500/25 transition-all duration-300 shadow-xl"
           >
-            <h3 className="text-xl font-rounded mb-6">Qualificações</h3>
-            <ul className="space-y-4 text-slate-200 font-resolve list-disc list-inside">
-              {qualifications.map((q) => (
-                <li key={q.course} className="flex flex-col">
-                  <span className="font-semibold text-sky-400">{q.course}</span>
-                  <span className="text-sm text-slate-400">
-                    {q.institution}
-                  </span>
-                  <span className="text-sm text-slate-500 italic">
-                    Concluído em {q.completed}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <div className="flex items-start justify-between">
+              <div>
+                <h3 className="text-xl font-semibold text-sky-400 font-resolve">
+                  Qualificações
+                </h3>
+              </div>
+
+              <button
+                onClick={() => setIsOpenQual(!isOpenQual)}
+                className="text-sky-400 hover:text-sky-300 transition-colors p-1"
+                aria-label="Expandir detalhes"
+              >
+                <ChevronDown
+                  className={`${
+                    isOpenQual ? "rotate-180" : "rotate-0"
+                  } transition-transform duration-300`}
+                />
+              </button>
+            </div>
+
+            <AnimatePresence initial={false}>
+              {isOpenQual && (
+                <motion.div
+                  key="content-qual"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <div className="mt-6 pt-6 border-t border-slate-800/80">
+                    <ul className="space-y-5 text-slate-200 font-resolve">
+                      {qualifications.map((q) => (
+                        <li key={q.course} className="flex flex-col">
+                          <span className="font-semibold text-sky-400">
+                            {q.course}
+                          </span>
+                          <span className="text-sm text-slate-400 mt-1">
+                            {q.institution}
+                          </span>
+                          <span className="text-sm text-slate-500 italic mt-0.5">
+                            Concluído em {q.completed}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         </div>
       </div>
