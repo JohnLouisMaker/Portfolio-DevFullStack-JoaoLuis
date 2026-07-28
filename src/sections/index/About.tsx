@@ -19,14 +19,8 @@ const highlights = [
     title: "Resolução de Problemas",
     description:
       "Capacidade analítica aprimorada no suporte de TI combinada com engenharia de software para transformar desafios complexos em código limpo.",
-  },
-  {
-    icon: Users,
-    title: "Trabalho em Equipe",
-    description:
-      "Mentalidade colaborativa, excelente comunicação e foco em boas práticas de arquitetura, usabilidade e entregas de impacto.",
-  },
-];
+  }
+]
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -50,12 +44,11 @@ export default function About() {
           </h2>
 
           <p className="max-w-2xl mx-auto mb-16 text-center text-slate-400 font-resolve tracking-wider">
-            Desenvolvedor Full Stack focado na criação de APIs RESTful de alta
-            performance, soluções em dados e interfaces modernas
+            Desenvolvedor Full Stack focado na criação de APIs RESTful, soluções em dados e interfaces modernas
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16">
           {/* Texto */}
           <motion.div
             initial="hidden"
@@ -63,60 +56,18 @@ export default function About() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUp}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="space-y-6 text-slate-300 font-resolve tracking-wider leading-relaxed"
+            className="space-y-6 text-slate-300 font-resolve tracking-wider leading-relaxed text-lg"
           >
-            <p className="text-lg">
-              Sou{" "}
-              <span className="font-semibold text-slate-100">
-                Desenvolvedor Full Stack e de Software
-              </span>{" "}
-              em formação. Atualmente atuo como{" "}
-              <span className="font-semibold text-slate-100">
-                Estagiário de TI no Secran Group
-              </span>
-              , onde apliquei{" "}
-              <span className="text-sky-400 font-medium">Python e Pandas</span>{" "}
-              no tratamento, organização e análise estratégica de dados
-              gerenciais para apoio à tomada de decisões em ativos de
-              equipamentos, além da vivência em suporte técnico e resolução de
-              incidentes em ambiente corporativo.
+            <p>
+              Sou Desenvolvedor Full Stack em formação e atuo como  <span className="text-sky-400">Estagiário de TI no Secran Group</span>, aplicando Python e Pandas na análise estratégica de dados gerenciais e no suporte corporativo.
             </p>
 
-            <p className="text-lg">
-              Estou no{" "}
-              <span className="font-semibold text-slate-100">4º semestre</span>{" "}
-              de{" "}
-              <span className="font-semibold text-slate-100">
-                Análise e Desenvolvimento de Sistemas (Unifametro)
-              </span>{" "}
-              e sou formado em Desenvolvimento Web Full Stack pelo programa{" "}
-              <span className="font-semibold text-slate-100">
-                Geração Tech (IEL Ceará / Digital College)
-              </span>
-              . Desenvolvo sistemas robustos combinando{" "}
-              <span className="text-sky-400 font-medium">
-                Python (FastAPI, SQLAlchemy, JWT, Pandas)
-              </span>{" "}
-              e PostgreSQL no backend com{" "}
-              <span className="text-sky-400 font-medium">
-                React.js, TypeScript e Tailwind CSS
-              </span>{" "}
-              no frontend.
+            <p>
+              Curso o 4º semestre de ADS na Unifametro e sou formado pelo programa Geração Tech (IEL / Digital College). Desenvolvo aplicações usando <span className="text-sky-400">FastAPI, Python e PostgreSQL</span> no backend, combinados a <span className="text-sky-400">React, TypeScript e Tailwind</span> no frontend.
             </p>
 
-            <p className="text-lg">
-              No meu portfólio de projetos, destaco o{" "}
-              <span className="font-semibold text-slate-100">FortalDados</span>{" "}
-              (mobilidade urbana com Leaflet, GeoPandas e IA com Groq + Llama
-              3.1), o{" "}
-              <span className="font-semibold text-slate-100">Deliver</span> (API
-              FastAPI, autenticação JWT, RBAC, React + Zustand) e a plataforma
-              da{" "}
-              <span className="font-semibold text-slate-100">
-                ONG União Felina
-              </span>
-              , consolidando boas práticas de arquitetura, usabilidade e impacto
-              real.
+            <p>
+              Entre meus principais projetos estão o FortalDados (mobilidade urbana e IA), o Deliver (API RESTful e React) e a plataforma da ONG União Felina.
             </p>
           </motion.div>
 
