@@ -38,7 +38,7 @@ export default function Skills() {
           <h2 className="text-3xl md:text-4xl font-resolve text-center mb-4">
             Habilidades & <span className="text-sky-400">Expertise</span>
           </h2>
-          <p className="font-rounded tracking-wider text-slate-400 text-center max-w-2xl mx-auto mb-16">
+          <p className="font-resolve tracking-wider text-slate-400 text-center max-w-2xl mx-auto mb-16">
             Tecnologias que utilizo no dia a dia para entregar soluções de
             qualidade
           </p>
@@ -62,7 +62,7 @@ export default function Skills() {
                 transition-all
               "
             >
-              <h3 className="text-xl font-rounded mb-6 flex items-center gap-2">
+              <h3 className="text-xl font-resolve mb-6 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-sky-400" />
                 {category.title}
               </h3>

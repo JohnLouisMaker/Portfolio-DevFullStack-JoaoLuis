@@ -41,7 +41,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl text-center mb-4 font-resolve">
             Sobre o <span className="text-sky-400">Deliver</span>
           </h2>
-          <p className="max-w-2xl mx-auto mb-16 text-center text-slate-400 font-rounded tracking-wider">
+          <p className="max-w-2xl mx-auto mb-16 text-center text-slate-400 font-resolve tracking-wider">
             Plataforma full-stack de gerenciamento de pedidos e autenticação em tempo real,
             unindo uma API robusta em FastAPI a uma interface moderna em React + Vite.
           </p>
@@ -56,17 +56,17 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="space-y-6"
           >
-            <p className="text-lg text-slate-400 font-rounded tracking-wider">
+            <p className="text-lg text-slate-400 font-resolve tracking-wider">
               Projeto de portfólio full-stack desenvolvido com Python (FastAPI, SQLAlchemy)
               no backend e React com Vite no frontend, garantindo alta performance e segurança.
             </p>
 
-            <p className="text-lg text-slate-400 font-rounded tracking-wider">
+            <p className="text-lg text-slate-400 font-resolve tracking-wider">
               É possível consultar o código fonte no GitHub tanto da API quanto do painel
               web interativo.
             </p>
 
-            <p className="text-lg text-slate-400 font-rounded tracking-wider">
+            <p className="text-lg text-slate-400 font-resolve tracking-wider">
               O objetivo do sistema é simplificar o fluxo de checkout e controle de estoque/pedidos,
               oferecendo isolamento de dados por perfil de usuário e uma experiência fluida no client.
             </p>
@@ -89,10 +89,10 @@ export default function About() {
                 </div>
 
                 <div>
-                  <h3 className="mb-1 text-lg font-rimouski text-slate-100">
+                  <h3 className="mb-1 text-lg font-resolve text-slate-100">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-slate-400 font-rounded tracking-wider">
+                  <p className="text-sm text-slate-400 font-resolve tracking-wider">
                     {item.description}
                   </p>
                 </div>

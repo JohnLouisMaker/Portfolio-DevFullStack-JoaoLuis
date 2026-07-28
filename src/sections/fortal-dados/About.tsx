@@ -41,7 +41,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl text-center mb-4 font-resolve">
             Sobre o <span className="text-sky-400">FortalDados</span>
           </h2>
-          <p className="max-w-2xl mx-auto mb-16 text-center text-slate-400 font-rounded tracking-wider">
+          <p className="max-w-2xl mx-auto mb-16 text-center text-slate-400 font-resolve tracking-wider">
             Plataforma de análise de mobilidade urbana de Fortaleza-CE,
             combinando mapas interativos com inteligência artificial
             conversacional sobre dados públicos de transporte.
@@ -57,19 +57,19 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="space-y-6"
           >
-            <p className="text-lg text-slate-400 font-rounded tracking-wider">
+            <p className="text-lg text-slate-400 font-resolve tracking-wider">
               Projeto de portfólio full-stack desenvolvido com dados reais da
               ETUFOR e da AMC, processados em Python e visualizados em React,
               com um chatbot de IA integrado para explorar os dados de forma
               conversacional.
             </p>
 
-            <p className="text-lg text-slate-400 font-rounded tracking-wider">
+            <p className="text-lg text-slate-400 font-resolve tracking-wider">
               É possível visualizar o projeto completo no GitHub ou explorar a
               demonstração ao vivo.
             </p>
 
-            <p className="text-lg text-slate-400 font-rounded tracking-wider">
+            <p className="text-lg text-slate-400 font-resolve tracking-wider">
               O objetivo é tornar os dados de mobilidade urbana de Fortaleza
               mais acessíveis, cruzando paradas de ônibus, pontos de lentidão e
               validações de bilhete em uma experiência visual e interativa.
@@ -93,10 +93,10 @@ export default function About() {
                 </div>
 
                 <div>
-                  <h3 className="mb-1 text-lg font-rimouski text-slate-100">
+                  <h3 className="mb-1 text-lg font-resolve text-slate-100">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-slate-400 font-rounded tracking-wider">
+                  <p className="text-sm text-slate-400 font-resolve tracking-wider">
                     {item.description}
                   </p>
                 </div>

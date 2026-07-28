@@ -56,7 +56,7 @@ export default function Pictures() {
 
               <div className="p-6 flex items-center gap-3">
                 <Camera className="w-5 h-5 text-sky-400 shrink-0" />
-                <h3 className="group-hover:text-sky-400 text-xl font-rimouski text-slate-100 ">
+                <h3 className="group-hover:text-sky-400 text-xl font-resolve text-slate-100 ">
                   {item.title}
                 </h3>
               </div>

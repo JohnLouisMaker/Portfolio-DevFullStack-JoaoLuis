@@ -1,23 +1,30 @@
 import { motion } from "framer-motion";
-import { Code2, Lightbulb, Users } from "lucide-react";
+import { Code2, Cpu, Lightbulb, Users } from "lucide-react";
 
 const highlights = [
   {
     icon: Code2,
-    title: "Código Limpo",
+    title: "APIs & Interfaces Limpas",
     description:
-      "Escrevo código legível, escalável e de fácil manutenção, seguindo boas práticas e padrões de projeto.",
+      "Construção de APIs RESTful performáticas com FastAPI/Python e interfaces reativas, tipadas e modernas com React + TypeScript.",
+  },
+  {
+    icon: Cpu,
+    title: "Análise & Dados",
+    description:
+      "Experiência prática na extração, tratamento e análise de dados (Pandas/GeoPandas) para suporte a decisões estratégicas.",
   },
   {
     icon: Lightbulb,
-    title: "Resolvedor de Problemas",
+    title: "Resolução de Problemas",
     description:
-      "Transformo desafios complexos em soluções simples, eficientes e bem pensadas.",
+      "Capacidade analítica aprimorada no suporte de TI combinada com engenharia de software para transformar desafios complexos em código limpo.",
   },
   {
     icon: Users,
     title: "Trabalho em Equipe",
-    description: "Mentalidade colaborativa, com boa comunicação.",
+    description:
+      "Mentalidade colaborativa, excelente comunicação e foco em boas práticas de arquitetura, usabilidade e entregas de impacto.",
   },
 ];
 
@@ -42,13 +49,13 @@ export default function About() {
             Sobre <span className="text-sky-400">Mim</span>
           </h2>
 
-          <p className="max-w-2xl mx-auto mb-16 text-center text-slate-400 font-rounded tracking-wider">
-            Desenvolvedor apaixonado por criar experiências digitais modernas e
-            funcionais
+          <p className="max-w-2xl mx-auto mb-16 text-center text-slate-400 font-resolve tracking-wider">
+            Desenvolvedor Full Stack focado na criação de APIs RESTful de alta
+            performance, soluções em dados e interfaces modernas
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 ">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Texto */}
           <motion.div
             initial="hidden"
@@ -56,54 +63,60 @@ export default function About() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUp}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="space-y-6"
+            className="space-y-6 text-slate-300 font-resolve tracking-wider leading-relaxed"
           >
-            <p className="text-lg text-slate-400 font-rounded tracking-wider">
+            <p className="text-lg">
               Sou{" "}
-              <span className="font-medium text-slate-100">
-                Desenvolvedor Web
+              <span className="font-semibold text-slate-100">
+                Desenvolvedor Full Stack e de Software
               </span>{" "}
-              buscando oportunidade de estágio para aprender e desenvolver
-              habilidades em aplicações modernas, focadas em performance,
-              usabilidade e boas práticas.
-            </p>
-
-            <p className="text-lg text-slate-400 font-rounded tracking-wider">
-              Sou estudante de{" "}
-              <span className="font-medium text-slate-100">
-                Análise e Desenvolvimento de Sistemas
-              </span>{" "}
-              no{" "}
-              <span className="font-medium text-slate-100">
-                Centro Universitário FAMETRO - Unifametro
-              </span>{" "}
-              e possuo formação pelo programa{" "}
-              <span className="font-medium text-slate-100">Geração Tech</span>,
-              no curso{" "}
-              <span className="font-medium text-slate-100">
-                Desenvolvimento Web Full Stack 2.0
+              em formação. Atualmente atuo como{" "}
+              <span className="font-semibold text-slate-100">
+                Estagiário de TI no Secran Group
               </span>
-              . Durante o curso intensivo de 3 meses, estudei e pratiquei HTML,
-              CSS, JavaScript, TypeScript e React.js , consolidando os conceitos
-              fundamentais do desenvolvimento web e preparando-me para iniciar
-              minha trajetória como estagiário.
+              , onde apliquei{" "}
+              <span className="text-sky-400 font-medium">Python e Pandas</span>{" "}
+              no tratamento, organização e análise estratégica de dados
+              gerenciais para apoio à tomada de decisões em ativos de
+              equipamentos, além da vivência em suporte técnico e resolução de
+              incidentes em ambiente corporativo.
             </p>
 
-            <p className="text-lg text-slate-400 font-rounded tracking-wider">
-              Além da formação, desenvolvi projetos acadêmicos e pessoais.
-              Participei da criação de um site para a
-              <span className="font-medium text-slate-100">
-                {" "}
+            <p className="text-lg">
+              Estou no{" "}
+              <span className="font-semibold text-slate-100">4º semestre</span>{" "}
+              de{" "}
+              <span className="font-semibold text-slate-100">
+                Análise e Desenvolvimento de Sistemas (Unifametro)
+              </span>{" "}
+              e sou formado em Desenvolvimento Web Full Stack pelo programa{" "}
+              <span className="font-semibold text-slate-100">
+                Geração Tech (IEL Ceará / Digital College)
+              </span>
+              . Desenvolvo sistemas robustos combinando{" "}
+              <span className="text-sky-400 font-medium">
+                Python (FastAPI, SQLAlchemy, JWT, Pandas)
+              </span>{" "}
+              e PostgreSQL no backend com{" "}
+              <span className="text-sky-400 font-medium">
+                React.js, TypeScript e Tailwind CSS
+              </span>{" "}
+              no frontend.
+            </p>
+
+            <p className="text-lg">
+              No meu portfólio de projetos, destaco o{" "}
+              <span className="font-semibold text-slate-100">FortalDados</span>{" "}
+              (mobilidade urbana com Leaflet, GeoPandas e IA com Groq + Llama
+              3.1), o{" "}
+              <span className="font-semibold text-slate-100">Deliver</span> (API
+              FastAPI, autenticação JWT, RBAC, React + Zustand) e a plataforma
+              da{" "}
+              <span className="font-semibold text-slate-100">
                 ONG União Felina
               </span>
-              , voltado ao apoio a animais de rua em Fortaleza. Também construí
-              outros projetos focados em
-              <span className="font-medium text-slate-100">
-                {" "}
-                aplicações web modernas, layouts e boas práticas de
-                desenvolvimento
-              </span>
-              , consolidando conhecimentos estudados durante a formação.
+              , consolidando boas práticas de arquitetura, usabilidade e impacto
+              real.
             </p>
           </motion.div>
 
@@ -117,18 +130,18 @@ export default function About() {
                 viewport={{ once: true, amount: 0.3 }}
                 variants={fadeInUp}
                 transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
-                whileHover={{ x: 10 }}
-                className="flex items-start gap-4 p-6 rounded-2xl bg-[#020617] border border-slate-800 hover:border-sky-500/50 transition-all"
+                whileHover={{ x: 8 }}
+                className="flex items-start gap-4 p-5 rounded-2xl bg-[#020617] border border-slate-800 hover:border-sky-500/50 transition-all shadow-sm"
               >
-                <div className="p-3 rounded-xl bg-sky-500/10 text-sky-400">
+                <div className="p-3 rounded-xl bg-sky-500/10 text-sky-400 shrink-0">
                   <item.icon className="w-6 h-6" />
                 </div>
 
                 <div>
-                  <h3 className="mb-1 text-lg font-rimouski text-slate-100">
+                  <h3 className="mb-1 text-lg font-resolve text-slate-100 font-medium">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-slate-400 font-rounded tracking-wider">
+                  <p className="text-sm text-slate-400 font-resolve tracking-wider leading-relaxed">
                     {item.description}
                   </p>
                 </div>

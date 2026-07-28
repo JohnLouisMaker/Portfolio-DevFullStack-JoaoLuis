@@ -124,7 +124,7 @@ export default function Navbar({ links, resume }: NavbarProps) {
                 transition={{ delay: index * 0.1 }}
                 onClick={handleNavLinkClick}
                 className="
-                  group relative text-xs uppercase tracking-widest
+                  group relative text-xs uppercase tracking-widest font-rounded
                   text-white hover:text-sky-400 transition-colors
                 "
               >
@@ -145,7 +145,7 @@ export default function Navbar({ links, resume }: NavbarProps) {
                   flex items-center gap-2
                   px-5 py-2 rounded-md
                   border border-sky-500/40
-                  text-sky-400 text-xs
+                  text-sky-400 text-xs font-rounded
                   hover:bg-sky-500/10
                   transition-all tracking-widest
                 "
@@ -230,7 +230,7 @@ export default function Navbar({ links, resume }: NavbarProps) {
                       flex items-center justify-center gap-2
                       px-5 py-2 rounded-md
                       border border-sky-500/40
-                      text-sky-400 text-sm
+                      text-sky-400 text-sm font-rounded
                       hover:bg-sky-500/10
                       transition-all tracking-widest
                     "

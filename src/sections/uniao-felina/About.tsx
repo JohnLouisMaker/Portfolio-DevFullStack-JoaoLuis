@@ -41,7 +41,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl text-center mb-4 font-resolve">
             Sobre a <span className="text-sky-400">União Felina</span>
           </h2>
-          <p className="max-w-2xl mx-auto mb-16 text-center text-slate-400 font-rounded tracking-wider">
+          <p className="max-w-2xl mx-auto mb-16 text-center text-slate-400 font-resolve tracking-wider">
             Centralização de informações e recursos para ajudar os animais
             abandonados da União Felina. Rascunho de um projeto de conclusão de
             curso.
@@ -57,19 +57,19 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="space-y-6"
           >
-            <p className="text-lg text-slate-400 font-rounded tracking-wider">
+            <p className="text-lg text-slate-400 font-resolve tracking-wider">
               Desenvolvido em parceria com colegas da Unifametro, participei
               ativamente da criação do layout e do frontend deste projeto. Foi
               um dos meus primeiros trabalhos completos e representou um grande
               aprendizado em design, usabilidade e desenvolvimento front-end.
             </p>
 
-            <p className="text-lg text-slate-400 font-rounded tracking-wider">
+            <p className="text-lg text-slate-400 font-resolve tracking-wider">
               É possível visualizar o projeto completo no GitHub ou no meu
               Showroom.
             </p>
 
-            <p className="text-lg text-slate-400 font-rounded tracking-wider">
+            <p className="text-lg text-slate-400 font-resolve tracking-wider">
               Este site foi criado com o propósito de transmitir a essência do
               trabalho da União Felina: a responsabilidade, a dedicação e a
               crença de que pequenos gestos podem transformar vidas.
@@ -93,10 +93,10 @@ export default function About() {
                 </div>
 
                 <div>
-                  <h3 className="mb-1 text-lg font-rimouski text-slate-100">
+                  <h3 className="mb-1 text-lg font-resolve text-slate-100">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-slate-400 font-rounded tracking-wider">
+                  <p className="text-sm text-slate-400 font-resolve tracking-wider">
                     {item.description}
                   </p>
                 </div>

@@ -56,7 +56,7 @@ export default function Contact() {
           <h2 className="text-3xl md:text-4xl font-resolve mb-4">
             Informações de <span className="text-sky-400">Contato</span>
           </h2>
-          <p className="font-rounded tracking-wider text-slate-400 max-w-2xl mx-auto">
+          <p className="font-resolve tracking-wider text-slate-400 max-w-2xl mx-auto">
             Você pode entrar em contato comigo pelos canais abaixo.
           </p>
         </motion.div>

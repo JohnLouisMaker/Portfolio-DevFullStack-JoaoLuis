@@ -73,7 +73,7 @@ export default function Experience() {
                   <h3 className="text-xl font-semibold text-sky-400 font-resolve">
                     {job.title}
                   </h3>
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mt-1 text-sm font-rounded tracking-wider text-slate-400">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mt-1 text-sm font-resolve tracking-wider text-slate-400">
                     <span>{job.company}</span>
                     <span className="hidden sm:inline text-slate-600">|</span>
                     <span className="text-slate-500 italic">{job.date}</span>
@@ -105,7 +105,7 @@ export default function Experience() {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-3 font-rounded">
+                    <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-3 font-resolve">
                       Principais Atividades
                     </h4>
                     <ul className="space-y-3 font-resolve text-slate-300 text-sm md:text-base list-disc list-inside pl-1">

@@ -48,7 +48,7 @@ export default function Hero() {
           viewport={{ once: true }}
           variants={fadeInUp}
           transition={{ duration: 0.6 }}
-          className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-rounded tracking-tight leading-tight mb-6"
+          className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-resolve tracking-tight leading-tight mb-6"
         >
           Oi, eu sou{" "}
           <span className="block sm:inline text-[#38BDF8] font-resolve">
@@ -65,7 +65,7 @@ export default function Hero() {
           viewport={{ once: true }}
           variants={fadeInUp}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="max-w-2xl mx-auto mb-10 text-slate-400 sm:text-lg md:text-xl font-rounded tracking-wider"
+          className="max-w-2xl mx-auto mb-10 text-slate-400 sm:text-lg md:text-xl font-resolve tracking-wider"
         >
           Crio experiências digitais modernas utilizando tecnologias atuais,
           transformando problemas complexos em soluções simples e eficientes.

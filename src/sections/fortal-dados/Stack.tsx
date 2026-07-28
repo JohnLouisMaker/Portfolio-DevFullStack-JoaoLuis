@@ -41,7 +41,7 @@ export default function Stack() {
           <h2 className="text-3xl md:text-4xl mb-4 font-resolve">
             Stack E <span className="text-sky-400">Showroom</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-slate-400 font-rounded tracking-wider">
+          <p className="max-w-2xl mx-auto text-slate-400 font-resolve tracking-wider">
             A construção do projeto envolveu um backend em Python para processar
             dados públicos e um frontend em React focado em visualização
             geoespacial e interação com IA.
@@ -64,10 +64,10 @@ export default function Stack() {
                   <div className="mb-4 inline-flex rounded-xl bg-sky-500/10 p-3 text-sky-400">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-rimouski text-slate-100 mb-2">
+                  <h3 className="text-lg font-resolve text-slate-100 mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-slate-400 font-rounded tracking-wider leading-7">
+                  <p className="text-sm text-slate-400 font-resolve tracking-wider leading-7">
                     {item.description}
                   </p>
                 </motion.div>
@@ -86,10 +86,10 @@ export default function Stack() {
             <p className="text-sm uppercase tracking-[0.35em] text-sky-400 mb-3">
               Sala De Apresentação
             </p>
-            <h3 className="text-2xl font-rimouski text-slate-100 mb-4">
+            <h3 className="text-2xl font-resolve text-slate-100 mb-4">
               Projeto aberto para conhecer, revisar e evoluir
             </h3>
-            <p className="text-slate-400 font-rounded tracking-wider leading-8 mb-6">
+            <p className="text-slate-400 font-resolve tracking-wider leading-8 mb-6">
               O repositório reúne o backend FastAPI, o processamento de dados e
               o frontend React, servindo como referência para quem quer explorar
               mobilidade urbana com dados reais e IA.

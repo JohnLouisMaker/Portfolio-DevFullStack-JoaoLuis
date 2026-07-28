@@ -199,7 +199,7 @@ export default function Projects() {
           <h2 className="text-3xl md:text-4xl font-resolve text-center mb-4">
             Projetos em <span className="text-sky-400">Destaque</span>
           </h2>
-          <p className="font-rounded tracking-wider text-slate-400 text-center max-w-2xl mx-auto mb-6">
+          <p className="font-resolve tracking-wider text-slate-400 text-center max-w-2xl mx-auto mb-6">
             Alguns projetos que representam bem meu trabalho e evolução técnica
           </p>
         </motion.div>
@@ -221,7 +221,7 @@ export default function Projects() {
                 >
                   <Link to={project.link} className="block h-full">
                     <motion.div
-                      className={`group font-rimouski rounded-2xl overflow-hidden ${cardBase}`}
+                      className={`group font-resolve rounded-2xl overflow-hidden ${cardBase}`}
                     >
                       <div className="aspect-video overflow-hidden">
                         <img

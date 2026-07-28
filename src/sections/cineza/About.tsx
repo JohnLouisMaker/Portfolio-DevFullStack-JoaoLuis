@@ -41,7 +41,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl text-center mb-4 font-resolve">
             Sobre o <span className="text-sky-400">Cineza</span>
           </h2>
-          <p className="max-w-2xl mx-auto mb-16 text-center text-slate-400 font-rounded tracking-wider">
+          <p className="max-w-2xl mx-auto mb-16 text-center text-slate-400 font-resolve tracking-wider">
             Aplicação web para busca e exploração de filmes em tempo real,
             integrada diretamente à API pública do TMDB (The Movie Database).
           </p>
@@ -56,18 +56,18 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="space-y-6"
           >
-            <p className="text-lg text-slate-400 font-rounded tracking-wider">
+            <p className="text-lg text-slate-400 font-resolve tracking-wider">
               Projeto de portfólio front-end desenvolvido com React e Vite, que
               consome a API do TMDB para trazer informações atualizadas do
               cinema mundial.
             </p>
 
-            <p className="text-lg text-slate-400 font-rounded tracking-wider">
+            <p className="text-lg text-slate-400 font-resolve tracking-wider">
               É possível visualizar o repositório completo no GitHub ou testar a
               demonstração ao vivo implantada na Vercel.
             </p>
 
-            <p className="text-lg text-slate-400 font-rounded tracking-wider">
+            <p className="text-lg text-slate-400 font-resolve tracking-wider">
               O objetivo do Cineza é oferecer uma busca rápida e minimalista,
               exibindo detalhes visuais e notas de avaliação de forma limpa.
             </p>
@@ -90,10 +90,10 @@ export default function About() {
                 </div>
 
                 <div>
-                  <h3 className="mb-1 text-lg font-rimouski text-slate-100">
+                  <h3 className="mb-1 text-lg font-resolve text-slate-100">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-slate-400 font-rounded tracking-wider">
+                  <p className="text-sm text-slate-400 font-resolve tracking-wider">
                     {item.description}
                   </p>
                 </div>
