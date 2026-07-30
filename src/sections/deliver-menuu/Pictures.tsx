@@ -1,19 +1,21 @@
 import { motion } from "framer-motion";
 import { Camera } from "lucide-react";
-import deliverPreview from "../../assets/img/deliver-food.png";
+import deliverFt1 from "../../assets/img/deliver/deliver-food.webp";
+import deliverFt2 from "../../assets/img/deliver/foto2.webp";
+import deliverFt3 from "../../assets/img/deliver/foto3.webp";
 
 const galleryItems = [
   {
     title: "Painel de Pedidos",
-    image: deliverPreview,
+    image: deliverFt1,
   },
   {
     title: "Interface e Autenticação",
-    image: deliverPreview,
+    image: deliverFt2,
   },
   {
     title: "Documentação da API (Swagger)",
-    image: deliverPreview,
+    image: deliverFt3,
   },
 ];
 

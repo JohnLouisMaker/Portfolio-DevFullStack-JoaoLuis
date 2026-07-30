@@ -3,10 +3,10 @@ import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import cinezaImg from "../../assets/img/cineza.png";
-import deliverImg from "../../assets/img/deliver-food.png";
-import fortaldados from "../../assets/img/fortaldados.png";
-import ufelina from "../../assets/img/ufelina.png";
+import cinezaImg from "../../assets/img/cineza/cineza.webp";
+import deliverImg from "../../assets/img/deliver/deliver-food.webp";
+import fortaldados from "../../assets/img/fortaldados/fortaldados.webp";
+import ufelina from "../../assets/img/onguniao/ufelina.webp";
 
 const projects = [
   {

@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Camera } from "lucide-react";
-import ufelina from "../../assets/img/ufelina.png";
+import ufelinafoto2 from "../../assets/img/onguniao/foto2.webp";
+import ufelinafoto3 from "../../assets/img/onguniao/foto3.webp";
+import ufelina from "../../assets/img/onguniao/ufelina.webp";
 
 const galleryItems = [
   {
@@ -9,11 +11,11 @@ const galleryItems = [
   },
   {
     title: "Foto 02",
-    image: ufelina,
+    image: ufelinafoto2,
   },
   {
     title: "Foto 03",
-    image: ufelina,
+    image: ufelinafoto3,
   },
 ];
 

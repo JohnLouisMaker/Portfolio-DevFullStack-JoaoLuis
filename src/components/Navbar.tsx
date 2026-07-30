@@ -2,7 +2,7 @@ import { AnimatePresence, easeOut, motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import JoaoLuisDev from "../assets/img/joao-luis-dev-banner.png";
+import JoaoLuisDev from "../assets/img/joao-luis-dev-banner.webp";
 
 interface NavLink {
   name: string;

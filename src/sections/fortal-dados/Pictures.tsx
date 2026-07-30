@@ -1,19 +1,21 @@
 import { motion } from "framer-motion";
 import { Camera } from "lucide-react";
-import mapaFortaleza from "../../assets/img/fortaldados.png";
+import fortalFt1 from "../../assets/img/fortaldados/fortaldados.webp";
+import fortalFt2 from "../../assets/img/fortaldados/foto2.webp";
+import fortalFt3 from "../../assets/img/fortaldados/foto3.webp";
 
 const galleryItems = [
   {
     title: "Foto 01",
-    image: mapaFortaleza,
+    image: fortalFt1,
   },
   {
     title: "Foto 02",
-    image: mapaFortaleza,
+    image: fortalFt2,
   },
   {
     title: "Foto 03",
-    image:  mapaFortaleza,
+    image: fortalFt3,
   },
 ];
 

@@ -1,19 +1,16 @@
 import { motion } from "framer-motion";
 import { Camera } from "lucide-react";
-import cinezaPreview from "../../assets/img/cineza.png";
+import cinezaFt1 from "../../assets/img/cineza/cineza.webp";
+import cinezaFt2 from "../../assets/img/cineza/foto2.webp";
 
 const galleryItems = [
   {
     title: "Busca de Filmes",
-    image: cinezaPreview,
+    image: cinezaFt1,
   },
   {
     title: "Resultados da API",
-    image: cinezaPreview,
-  },
-  {
-    title: "Detalhes e Notas",
-    image: cinezaPreview,
+    image: cinezaFt2,
   },
 ];
 
